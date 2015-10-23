@@ -97,7 +97,7 @@
     },
     listen: function() {
       document.querySelector("body").addEventListener("click", function(event){
-        if (event.target.tagName === "LI") {
+        if (event.target.tagName.toLowerCase() === "li") {
           TCTCTW.game.turn(event.target);
         }
       }, false);
