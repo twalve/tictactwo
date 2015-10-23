@@ -4,6 +4,6 @@ This repository holds two solutions to the Odin Project Tic Tac Toe problem. Tic
 The solutions can be viewed online at:
 http://machinetag.com/odin/tictactwo/
 
-So:
 http://machinetag.com/odin/tictactwo/2014
+
 http://machinetag.com/odin/tictactwo/2015
