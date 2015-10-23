@@ -1,3 +1,7 @@
+var $ = function(selector) {
+  return document.querySelector(selector);
+};
+
 (function(){
   var TCTCTW = {
     ENDED: false,
@@ -33,9 +37,8 @@
             break;
         }
 
-        document.querySelector("body > aside h1").innerHTML = message;
+        $("body > aside h1").innerHTML = message;
         document.querySelector("body > aside .icon").className = "icon " + className;
-
         document.querySelector("body").classList.add(ending);
       },
       pattern: function() {
