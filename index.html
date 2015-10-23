@@ -5,33 +5,21 @@
   	<meta name=viewport content="width=device-width, initial-scale=1">
   	<title>tictactwo</title>
 
-    <!-- <link rel=stylesheet href='//fonts.googleapis.com/css?family=Lato:300,700'> -->
+    <link rel=stylesheet href='//fonts.googleapis.com/css?family=Lato:300,700'>
+    <link rel=stylesheet href="style/font.css">
+    <link rel=stylesheet href="style/base.css">
     <link rel=stylesheet href="style/sheet.css">
 
     <style>
-      ol {
-        border-left: .1rem solid;
-        border-top: .1rem solid;
-        display: block;
-        margin: 0 auto;
-        width: 9rem;
-      }
 
-      li {
-        border-bottom: .1rem solid;
-        border-right: .1rem solid;
-        cursor: pointer;
-        float: left;
-        height: 3rem;
-        width: 3rem;
-      }
+
     </style>
   </head>
 
   <body class="single">
     <main role=main id=main class=main>
       <header>
-        <h1></h1>
+        <h1>Tic Tac Two</h1>
       </header>
       <div>
         <section>
@@ -41,52 +29,16 @@
       <footer>
       </footer>
     </main>
+    <aside>
+      <div>
+        <h1></h1>
+        <strong class="icon"></strong>
+        <button class="icon icon-refresh" id="replay"></button>
+      </div>
+    </aside>
 
     <!-- // <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
-    <!-- // <script src="scripts/scripts.js"></script> -->
-    <script>
-      (function(){
-        var TCTCTW = {
-          GRID: {
-            columns: 3,
-            rows: 3,
-            state: []
-          },
-          WINS: [
-            [1,2,3], [4,5,6], [7,8,9],
-            [1,4,7], [2,5,8], [3,6,9],
-            [1,5,9], [3,5,7]
-          ],
-          SYMBOL: "X",// "0"
-          build: function() {
-            var target = document.querySelector("ol");
-            var list = document.createElement("ol");
-            var cells = this.GRID.columns * this.GRID.rows;
-            var i = 0;
-
-            for (; i < cells; i += 1) {
-              this.GRID.state.push(" ");
-              var cell = document.createElement("li");
-              list.appendChild(cell);
-            }
-
-            target.innerHTML = list.innerHTML;
-          },
-          listen: function() {
-            document.querySelector("body").addEventListener("click", function(event){
-              console.log(event.target)
-            }, false);
-          },
-          init: function() {
-            this.build();
-            this.listen();
-          }
-        };
-
-        window.TCTCTW = TCTCTW;
-        TCTCTW.init();
-
-      }());
-    </script>
+    <script src="scripts/scripts.js"></script>
+    <script></script>
   </body>
 </html>
